@@ -7,6 +7,11 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import Protected from './pages/Protected';
 import SignupPage from './pages/SignupPage';
+import AllRestaurants from './pages/AllRestaurants';
+import FindRestaurants from './pages/FindRestaurants';
+import AddRestaurant from './pages/AddRestaurant';
+import RestaurantDetails from './pages/RestaurantDetails';
+import UpdateRestaurant from './pages/UpdateRestaurant';
 
 function App() {
   return (

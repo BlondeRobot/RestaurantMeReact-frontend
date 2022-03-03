@@ -36,6 +36,15 @@ class ApiService {
     // same as
     // return axios.post("http://localhost:5005/auth/verify");
   };
+
+  getRestaurants = () => {
+    return this.api.get('/api/restaurants');
+  }
+
+  getRestaurantDetails = (id) => {
+    return this.api.get(`/api/restaurants/${id}`);
+  }
+
 }
 
 // Create one instance (object) of the service
