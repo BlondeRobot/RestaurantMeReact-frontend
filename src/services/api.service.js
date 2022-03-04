@@ -39,12 +39,15 @@ class ApiService {
 
   getRestaurants = () => {
     return this.api.get('/api/restaurants');
-  }
+  };
 
-  getRestaurantDetails = (id) => {
+  getRestaurantDetails = id => {
     return this.api.get(`/api/restaurants/${id}`);
-  }
+  };
 
+  addRestaurant = form => {
+    return this.api.post('/api/restaurants', form);
+  };
 }
 
 // Create one instance (object) of the service
