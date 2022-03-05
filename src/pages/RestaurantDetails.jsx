@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import apiService from '../services/api.service';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 function RestaurantDetails() {
 
   const {id} = useParams();
   const [restaurant, setRestaurant] = useState([])
+  const navigate = useNavigate(); 
 
     useEffect(() => {
       const getRestaurantDetails = async () => {
@@ -20,6 +21,16 @@ function RestaurantDetails() {
       getRestaurantDetails();
     }, []);
 
+  const handleDelete = async () => {
+    try {
+      await apiService.deleteRestaurant(id);
+      navigate('/restaurants');
+    } catch (error) {
+      console.log(error);
+    }
+
+  }  
+
   return (
     <div>
       <h1>See Your Restaurants Details</h1>
@@ -28,6 +39,7 @@ function RestaurantDetails() {
       <p>Neighborhood: {restaurant.neighborhood}</p>
       <p>Cuisine: {restaurant.cuisine}</p>
       <p>Notes: {restaurant.notes}</p>
+      <button onClick={handleDelete}>Delete This Restaurant</button>
     </div>
   );
 }

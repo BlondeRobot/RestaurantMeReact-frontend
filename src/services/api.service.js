@@ -52,6 +52,10 @@ class ApiService {
   addRestaurant = form => {
     return this.api.post('/api/restaurants', form);
   };
+
+  deleteRestaurant = id => {
+    return this.api.delete(`/api/restaurants/${id}`);
+  }
 }
 
 // Create one instance (object) of the service

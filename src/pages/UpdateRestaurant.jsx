@@ -15,7 +15,7 @@ function UpdateRestaurant() {
      glutenFree: 'TBE',
      notes: 'TBE',
    });
-   const navigate = useNavigate(); 
+  const navigate = useNavigate(); 
 
   const getRestaurantById = async () => {
     const response = await apiService.getRestaurantDetails(id)
