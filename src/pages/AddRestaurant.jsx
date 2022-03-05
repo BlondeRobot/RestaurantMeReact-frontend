@@ -8,7 +8,7 @@ function AddRestaurant() {
       name: '',
       priority: 'TBE',
       cuisine: 'TBE',
-      neighbothood: 'TBE',
+      neighborhood: 'TBE',
       budget: 'TBE',
       ambience: 'TBE',
       veganMenu: 'TBE',
@@ -51,8 +51,8 @@ function AddRestaurant() {
         <input type="text" name="priority" value={form.priority} onChange={handleForm} />
         <label>Cuisine</label>
         <input type="text" name="cuisine" value={form.cuisine} onChange={handleForm} />
-        <label>Neighbothood</label>
-        <input type="text" name="neighbothood" value={form.neighbothood} onChange={handleForm} />
+        <label>Neighborhood</label>
+        <input type="text" name="neighborhood" value={form.neighborhood} onChange={handleForm} />
         <label>Budget</label>
         <input type="text" name="budget" value={form.budget} onChange={handleForm} />
         <label>Ambience</label>
