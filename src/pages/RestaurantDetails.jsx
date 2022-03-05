@@ -25,9 +25,9 @@ function RestaurantDetails() {
       <h1>See Your Restaurants Details</h1>
       <img src={restaurant.image} />
       <h3>{restaurant.name}</h3>
-      <p>{restaurant.neighborhood}</p>
-      
-
+      <p>Neighborhood: {restaurant.neighborhood}</p>
+      <p>Cuisine: {restaurant.cuisine}</p>
+      <p>Notes: {restaurant.notes}</p>
     </div>
   );
 }

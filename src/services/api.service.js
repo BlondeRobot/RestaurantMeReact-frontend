@@ -45,6 +45,10 @@ class ApiService {
     return this.api.get(`/api/restaurants/${id}`);
   };
 
+  updateRestaurant(id, body) {
+    return this.api.put(`/api/restaurants/${id}`, body);
+  }
+
   addRestaurant = form => {
     return this.api.post('/api/restaurants', form);
   };
