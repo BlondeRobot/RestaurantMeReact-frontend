@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import apiService from '../services/api.service';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function RestaurantDetails() {
 
@@ -40,6 +41,8 @@ function RestaurantDetails() {
       <p>Cuisine: {restaurant.cuisine}</p>
       <p>Notes: {restaurant.notes}</p>
       <button onClick={handleDelete}>Delete This Restaurant</button>
+      <Link to={`/restaurants/${id}/update`}>Edit This Restaurant</Link>
+      <Link to={`/restaurants`}>See All Restaurants</Link>
     </div>
   );
 }

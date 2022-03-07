@@ -1,45 +1,43 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api.service';
+import config from '../config/config';
 
 function AddRestaurant() {
-
   const [form, setForm] = useState({
-      name: '',
-      priority: 'TBE',
-      cuisine: 'TBE',
-      neighborhood: 'TBE',
-      budget: 'TBE',
-      ambience: 'TBE',
-      veganMenu: 'TBE',
-      glutenFree: 'TBE',
-      notes: 'TBE'
-    });
-  
-  const navigate = useNavigate(); 
-    
+    name: '',
+    priority: 'TBE',
+    cuisine: 'TBE',
+    neighborhood: 'TBE',
+    budget: 'TBE',
+    ambience: 'TBE',
+    veganMenu: 'TBE',
+    glutenFree: 'TBE',
+    notes: 'TBE',
+  });
+
+  const navigate = useNavigate();
+
   const handleForm = e => {
-      setForm(previous => {
-        return {
-          ...previous,
-          [e.target.name]: e.target.value,
-        };
-      });
-    };    
-   
+    setForm(previous => {
+      return {
+        ...previous,
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
-    
+
     apiService
       .addRestaurant(form)
       .then(response => {
         console.log(response);
-        navigate('/restaurants')
+        navigate('/restaurants');
       })
       .catch(error => console.log(error));
   };
-
 
   return (
     <div>
@@ -48,19 +46,75 @@ function AddRestaurant() {
         <label>Name</label>
         <input type="text" name="name" value={form.name} onChange={handleForm} />
         <label>Priority</label>
-        <input type="text" name="priority" value={form.priority} onChange={handleForm} />
+        <select name='priority' value={form.priority} onChange={handleForm}>
+          {config.priority.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Cuisine</label>
-        <input type="text" name="cuisine" value={form.cuisine} onChange={handleForm} />
+        <select name='cuisine' value={form.cuisine} onChange={handleForm}>
+          {config.cuisine.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Neighborhood</label>
-        <input type="text" name="neighborhood" value={form.neighborhood} onChange={handleForm} />
+        <select name='neighborhood' value={form.neighborhood} onChange={handleForm}>
+          {config.neighborhood.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Budget</label>
-        <input type="text" name="budget" value={form.budget} onChange={handleForm} />
+        <select name='budget' value={form.budget} onChange={handleForm}>
+          {config.budget.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Ambience</label>
-        <input type="text" name="ambience" value={form.ambience} onChange={handleForm} />
+        <select name='ambience' value={form.ambience} onChange={handleForm}>
+          {config.ambience.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Vegan Menu</label>
-        <input type="text" name="veganMenu" value={form.veganMenu} onChange={handleForm} />
+        <select name='veganMenu' value={form.veganMenu} onChange={handleForm}>
+          {config.veganMenu.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Gluten Free</label>
-        <input type="text" name="glutenFree" value={form.glutenFree} onChange={handleForm} />
+        <select name='glutenFree' value={form.glutenFree} onChange={handleForm}>
+          {config.glutenFree.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Notes</label>
         <input type="text" name="notes" value={form.notes} onChange={handleForm} />
         <button type="submit">Add New Restaurant</button>

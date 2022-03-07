@@ -41,6 +41,10 @@ class ApiService {
     return this.api.get('/api/restaurants');
   };
 
+  findRestaurants = search => {
+    return this.api.post('/api/restaurants/find', search);
+  };
+
   getRestaurantDetails = id => {
     return this.api.get(`/api/restaurants/${id}`);
   };
@@ -55,7 +59,7 @@ class ApiService {
 
   deleteRestaurant = id => {
     return this.api.delete(`/api/restaurants/${id}`);
-  }
+  };
 }
 
 // Create one instance (object) of the service

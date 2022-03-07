@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import apiService from '../services/api.service';
+import config from '../config/config';
 
 function UpdateRestaurant() {
    const { id } = useParams();
@@ -63,19 +64,75 @@ function UpdateRestaurant() {
         <label>Name</label>
         <input type="text" name="name" value={restaurant.name} onChange={handleOnChange} />
         <label>Priority</label>
-        <input type="text" name="priority" value={restaurant.priority} onChange={handleOnChange} />
+        <select name="priority" value={restaurant.priority} onChange={handleOnChange}>
+          {config.priority.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Cuisine</label>
-        <input type="text" name="cuisine" value={restaurant.cuisine} onChange={handleOnChange} />
+        <select name="cuisine" value={restaurant.cuisine} onChange={handleOnChange}>
+          {config.cuisine.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Neighborhood</label>
-        <input type="text" name="neighborhood" value={restaurant.neighborhood} onChange={handleOnChange} />
+        <select name="neighborhood" value={restaurant.neighborhood} onChange={handleOnChange}>
+          {config.neighborhood.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Budget</label>
-        <input type="text" name="budget" value={restaurant.budget} onChange={handleOnChange} />
+        <select name="budget" value={restaurant.budget} onChange={handleOnChange}>
+          {config.budget.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Ambience</label>
-        <input type="text" name="ambience" value={restaurant.ambience} onChange={handleOnChange} />
+        <select name="ambience" value={restaurant.ambience} onChange={handleOnChange}>
+          {config.ambience.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Vegan Menu</label>
-        <input type="text" name="veganMenu" value={restaurant.veganMenu} onChange={handleOnChange} />
+        <select name="veganMenu" value={restaurant.veganMenu} onChange={handleOnChange}>
+          {config.veganMenu.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Gluten Free</label>
-        <input type="text" name="glutenFree" value={restaurant.glutenFree} onChange={handleOnChange} />
+        <select name="glutenFree" value={restaurant.glutenFree} onChange={handleOnChange}>
+          {config.glutenFree.map(option => {
+            return (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            );
+          })}
+        </select>
         <label>Notes</label>
         <input type="text" name="notes" value={restaurant.notes} onChange={handleOnChange} />
         <button type="submit">Update Your Restaurant</button>
