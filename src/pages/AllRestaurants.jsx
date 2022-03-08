@@ -22,7 +22,7 @@ function AllRestaurants() {
   return (
     <div>
       <h1>See All Restaurants Here</h1>
-      {restaurants.map((restaurant) => {
+      {restaurants.map(restaurant => {
         return (
           <div key={restaurant._id}>
             <Link to={`/restaurants/${restaurant._id}`}>
@@ -30,9 +30,9 @@ function AllRestaurants() {
             </Link>
           </div>
         );
-      })
-
-      }
+      })}
+      <Link to={`/restaurants/find`}>Find A Restaurant Here</Link>
+      <Link to={`/restaurants/add`}>Add A Restaurant Here</Link>
     </div>
   );
 }

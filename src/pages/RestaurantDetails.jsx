@@ -37,8 +37,13 @@ function RestaurantDetails() {
       <h1>See Your Restaurants Details</h1>
       <img src={restaurant.image} />
       <h3>{restaurant.name}</h3>
-      <p>Neighborhood: {restaurant.neighborhood}</p>
+      <p>Priority: {restaurant.priority}</p>
       <p>Cuisine: {restaurant.cuisine}</p>
+      <p>Neighborhood: {restaurant.neighborhood}</p>
+      <p>Budget: {restaurant.budget}</p>
+      <p>Ambience: {restaurant.ambience}</p>
+      <p>Vegan Menu: {restaurant.veganMenu}</p>
+      <p>Gluten Free: {restaurant.glutenFree}</p>
       <p>Notes: {restaurant.notes}</p>
       <button onClick={handleDelete}>Delete This Restaurant</button>
       <Link to={`/restaurants/${id}/update`}>Edit This Restaurant</Link>

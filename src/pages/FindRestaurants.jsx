@@ -6,7 +6,7 @@ import config from '../config/config';
 function FindRestaurants() {
 
   const [search, setSearch] = useState({
-        name: '',
+    name: '',
     priority: '',
     cuisine: '',
     neighborhood: '',
@@ -116,7 +116,6 @@ function FindRestaurants() {
             );
           })}
         </select>
-        <label>Notes</label>
         <button type="submit">Find A Restaurant</button>
       </form>
     </div>
