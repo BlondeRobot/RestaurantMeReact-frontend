@@ -31,8 +31,6 @@ function AllRestaurants() {
           </div>
         );
       })}
-      <Link to={`/restaurants/find`}>Find A Restaurant Here</Link>
-      <Link to={`/restaurants/add`}>Add A Restaurant Here</Link>
     </div>
   );
 }

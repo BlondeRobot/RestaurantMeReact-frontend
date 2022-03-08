@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import apiService from '../services/api.service';
 import config from '../config/config';
+import FoundRestaurants from './FoundRestaurants';
 
 function FindRestaurants() {
+
+  const [foundRestaurants, setFoundRestaurants] = useState([])
 
   const [search, setSearch] = useState({
     name: '',
@@ -17,7 +19,6 @@ function FindRestaurants() {
     notes: '',
   })
 
-  const navigate = useNavigate();
 
   const handleSearch = e => {
     setSearch(previous => {
@@ -34,8 +35,7 @@ function FindRestaurants() {
     apiService
       .findRestaurants(search)
       .then(response => {
-        console.log(response);
-        navigate('/restaurants');
+        setFoundRestaurants(response.data)
       })
       .catch(error => console.log(error));
   };
@@ -118,6 +118,8 @@ function FindRestaurants() {
         </select>
         <button type="submit">Find A Restaurant</button>
       </form>
+      <FoundRestaurants foundRestaurants={foundRestaurants} />
+
     </div>
   );
 }
