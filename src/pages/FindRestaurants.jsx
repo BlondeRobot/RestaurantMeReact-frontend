@@ -39,7 +39,7 @@ function FindRestaurants() {
       })
       .catch(error => console.log(error));
   };
-
+  
   return (
     <div>
       <h1>Find Restaurants That Match Your Search Criteria</h1>

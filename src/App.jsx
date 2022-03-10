@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import IsAnon from './components/IsAnon';
 import IsPrivate from './components/IsPrivate';
 import Navbar from './components/Navbar';
+import BottomNavbar from './components/BottomNavbar';
 import { AuthProviderWrapper } from './context/auth.context';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
@@ -17,6 +18,7 @@ function App() {
   return (
     <AuthProviderWrapper>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -85,6 +87,7 @@ function App() {
         />
         <Route path="*" element={<div>404 Not Found</div>} />
       </Routes>
+      <BottomNavbar />
     </AuthProviderWrapper>
   );
 }
