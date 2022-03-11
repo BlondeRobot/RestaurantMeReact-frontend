@@ -8,23 +8,21 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
+    // <nav fixed top-0 left-0 right-0 h-45 pb-10>
     <nav>
-
       {isLoggedIn && (
-        <>
-          <Link to="/restaurants">
-            <button>Restaurants</button>
-          </Link>
-          <Link to="/restaurants/add">Add</Link>
-          <Link to="/restaurants/find">Find</Link>
-
-          <button onClick={logOutUser}>Logout</button>
-          <span>{user && user.name}</span>
-        </>
+        <div className="bg-yellow-300">
+          <div>
+            <span>{user && user.name}</span>
+          </div>
+          <div>
+            <button onClick={logOutUser}>Logout</button>
+          </div>
+        </div>
       )}
 
       {!isLoggedIn && (
-        <>
+        <div className="bg-slate-400">
           <Link to="/signup">
             {' '}
             <button>Sign Up</button>{' '}
@@ -33,7 +31,7 @@ function Navbar() {
             {' '}
             <button>Login</button>{' '}
           </Link>
-        </>
+        </div>
       )}
     </nav>
   );

@@ -6,7 +6,6 @@ function BottomNavbar() {
   const { isLoggedIn } = useContext(AuthContext);
   return (
     <nav>
-      asdf
       {isLoggedIn && (
         <div className="flex fixed bottom-0 inset-x-0 w-screen h-20 shadow-inner bg-white">
           <div className="w-1/3 flex justify-center items-center">
