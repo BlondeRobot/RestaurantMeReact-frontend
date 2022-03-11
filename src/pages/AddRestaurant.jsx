@@ -42,11 +42,11 @@ function AddRestaurant() {
   return (
     <div>
       <h1>Add A Restaurant To Your Wishlist</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="flex flex-col items-center" onSubmit={handleSubmit}>
         <label>Name</label>
         <input type="text" name="name" value={form.name} onChange={handleForm} />
         <label>Priority</label>
-        <select name='priority' value={form.priority} onChange={handleForm}>
+        <select name="priority" value={form.priority} onChange={handleForm}>
           {config.priority.map(option => {
             return (
               <option key={option} value={option}>
@@ -56,7 +56,7 @@ function AddRestaurant() {
           })}
         </select>
         <label>Cuisine</label>
-        <select name='cuisine' value={form.cuisine} onChange={handleForm}>
+        <select name="cuisine" value={form.cuisine} onChange={handleForm}>
           {config.cuisine.map(option => {
             return (
               <option key={option} value={option}>
@@ -66,7 +66,7 @@ function AddRestaurant() {
           })}
         </select>
         <label>Neighborhood</label>
-        <select name='neighborhood' value={form.neighborhood} onChange={handleForm}>
+        <select name="neighborhood" value={form.neighborhood} onChange={handleForm}>
           {config.neighborhood.map(option => {
             return (
               <option key={option} value={option}>
@@ -76,7 +76,7 @@ function AddRestaurant() {
           })}
         </select>
         <label>Budget</label>
-        <select name='budget' value={form.budget} onChange={handleForm}>
+        <select name="budget" value={form.budget} onChange={handleForm}>
           {config.budget.map(option => {
             return (
               <option key={option} value={option}>
@@ -86,7 +86,7 @@ function AddRestaurant() {
           })}
         </select>
         <label>Ambience</label>
-        <select name='ambience' value={form.ambience} onChange={handleForm}>
+        <select name="ambience" value={form.ambience} onChange={handleForm}>
           {config.ambience.map(option => {
             return (
               <option key={option} value={option}>
@@ -96,7 +96,7 @@ function AddRestaurant() {
           })}
         </select>
         <label>Vegan Menu</label>
-        <select name='veganMenu' value={form.veganMenu} onChange={handleForm}>
+        <select name="veganMenu" value={form.veganMenu} onChange={handleForm}>
           {config.veganMenu.map(option => {
             return (
               <option key={option} value={option}>
@@ -106,7 +106,7 @@ function AddRestaurant() {
           })}
         </select>
         <label>Gluten Free</label>
-        <select name='glutenFree' value={form.glutenFree} onChange={handleForm}>
+        <select name="glutenFree" value={form.glutenFree} onChange={handleForm}>
           {config.glutenFree.map(option => {
             return (
               <option key={option} value={option}>
