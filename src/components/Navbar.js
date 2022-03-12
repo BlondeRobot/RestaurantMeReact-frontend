@@ -11,7 +11,7 @@ function Navbar() {
     // <nav fixed top-0 left-0 right-0 h-45 pb-10>
     <nav>
       {isLoggedIn && (
-        <div className="bg-yellow-300">
+        <div className="bg-white justify-between shadow-inner flex">
           <div>
             <span>{user && user.name}</span>
           </div>

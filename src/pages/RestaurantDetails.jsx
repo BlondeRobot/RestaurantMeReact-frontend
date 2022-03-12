@@ -45,9 +45,15 @@ function RestaurantDetails() {
       <p>Vegan Menu: {restaurant.veganMenu}</p>
       <p>Gluten Free: {restaurant.glutenFree}</p>
       <p>Notes: {restaurant.notes}</p>
-      <button onClick={handleDelete}>Delete This Restaurant</button>
-      <Link to={`/restaurants/${id}/update`}>Edit This Restaurant</Link>
-      <Link to={`/restaurants`}>See All Restaurants</Link>
+      <button
+        className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
+        onClick={handleDelete}
+      >
+        Delete This Restaurant
+      </button>
+      <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow">
+        <Link to={`/restaurants/${id}/update`}>Edit This Restaurant</Link>
+      </button>
     </div>
   );
 }

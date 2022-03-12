@@ -60,82 +60,152 @@ function UpdateRestaurant() {
   return (
     <div>
       <h1>Update Your Restaurant</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Name</label>
-        <input type="text" name="name" value={restaurant.name} onChange={handleOnChange} />
-        <label>Priority</label>
-        <select name="priority" value={restaurant.priority} onChange={handleOnChange}>
-          {config.priority.map(option => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-        <label>Cuisine</label>
-        <select name="cuisine" value={restaurant.cuisine} onChange={handleOnChange}>
-          {config.cuisine.map(option => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-        <label>Neighborhood</label>
-        <select name="neighborhood" value={restaurant.neighborhood} onChange={handleOnChange}>
-          {config.neighborhood.map(option => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-        <label>Budget</label>
-        <select name="budget" value={restaurant.budget} onChange={handleOnChange}>
-          {config.budget.map(option => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-        <label>Ambience</label>
-        <select name="ambience" value={restaurant.ambience} onChange={handleOnChange}>
-          {config.ambience.map(option => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-        <label>Vegan Menu</label>
-        <select name="veganMenu" value={restaurant.veganMenu} onChange={handleOnChange}>
-          {config.veganMenu.map(option => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-        <label>Gluten Free</label>
-        <select name="glutenFree" value={restaurant.glutenFree} onChange={handleOnChange}>
-          {config.glutenFree.map(option => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-        <label>Notes</label>
-        <input type="text" name="notes" value={restaurant.notes} onChange={handleOnChange} />
-        <button type="submit">Update Your Restaurant</button>
+      <form className="flex flex-col items-center" onSubmit={handleSubmit}>
+        <div className="flex w-full py-1">
+          <label className="pt-2 pb-1">Name</label>
+          <input
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            type="text"
+            name="name"
+            value={restaurant.name}
+            onChange={handleOnChange}
+          />
+        </div>
+        <div className="flex w-full py-1">
+          <label>Priority</label>
+          <select
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            name="priority"
+            value={restaurant.priority}
+            onChange={handleOnChange}
+          >
+            {config.priority.map(option => {
+              return (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="flex w-full py-1">
+          <label>Cuisine</label>
+          <select
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            name="cuisine"
+            value={restaurant.cuisine}
+            onChange={handleOnChange}
+          >
+            {config.cuisine.map(option => {
+              return (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="flex w-full py-1">
+          <label>Neighborhood</label>
+          <select
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            name="neighborhood"
+            value={restaurant.neighborhood}
+            onChange={handleOnChange}
+          >
+            {config.neighborhood.map(option => {
+              return (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="flex w-full py-1">
+          <label>Budget</label>
+          <select
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            name="budget"
+            value={restaurant.budget}
+            onChange={handleOnChange}
+          >
+            {config.budget.map(option => {
+              return (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="flex w-full py-1">
+          <label>Ambience</label>
+          <select
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            name="ambience"
+            value={restaurant.ambience}
+            onChange={handleOnChange}
+          >
+            {config.ambience.map(option => {
+              return (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="flex w-full py-1">
+          <label>Vegan Menu</label>
+          <select
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            name="veganMenu"
+            value={restaurant.veganMenu}
+            onChange={handleOnChange}
+          >
+            {config.veganMenu.map(option => {
+              return (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="flex w-full py-1">
+          <label>Gluten Free</label>
+          <select
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            name="glutenFree"
+            value={restaurant.glutenFree}
+            onChange={handleOnChange}
+          >
+            {config.glutenFree.map(option => {
+              return (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+        <div className="flex w-full py-1">
+          <label>Notes</label>
+          <input
+            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            type="text"
+            name="notes"
+            value={restaurant.notes}
+            onChange={handleOnChange}
+          />
+        </div>
+        <button
+          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
+          type="submit"
+        >
+          Update Your Restaurant
+        </button>
       </form>
     </div>
   );

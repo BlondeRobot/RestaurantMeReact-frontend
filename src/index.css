@@ -8,8 +8,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-
 }
 
 .inactive {
@@ -17,10 +15,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 img {
-  max-width: 95%;
+  max-width: 100%;
   border-radius: 15px;
+  object-fit: contain;
+}
+
+/* select {
+  height: 15px;
+  width: 100px;
+  box-sizing:border-box;
+  background-color: aqua;
+  -webkit-box-sizing: border-box;
+} */
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
 }

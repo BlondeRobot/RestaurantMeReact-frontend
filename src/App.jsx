@@ -17,77 +17,79 @@ import UpdateRestaurant from './pages/UpdateRestaurant';
 function App() {
   return (
     <AuthProviderWrapper>
-      <Navbar />
+      <div className=" container px-4">
+        <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/protected"
-          element={
-            <IsPrivate>
-              <Protected />
-            </IsPrivate>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <IsAnon>
-              <LoginPage />
-            </IsAnon>
-          }
-        />
-        <Route
-          path="/signup"
-          element={
-            <IsAnon>
-              <SignupPage />
-            </IsAnon>
-          }
-        />
-        <Route
-          path="/restaurants"
-          element={
-            <IsPrivate>
-              <AllRestaurants />
-            </IsPrivate>
-          }
-        />
-        <Route
-          path="/restaurants/find"
-          element={
-            <IsPrivate>
-              <FindRestaurants />
-            </IsPrivate>
-          }
-        />
-        <Route
-          path="/restaurants/add"
-          element={
-            <IsPrivate>
-              <AddRestaurant />
-            </IsPrivate>
-          }
-        />
-        <Route
-          path="/restaurants/:id"
-          element={
-            <IsPrivate>
-              <RestaurantDetails />
-            </IsPrivate>
-          }
-        />
-        <Route
-          path="/restaurants/:id/update"
-          element={
-            <IsPrivate>
-              <UpdateRestaurant />
-            </IsPrivate>
-          }
-        />
-        <Route path="*" element={<div>404 Not Found</div>} />
-      </Routes>
-      <BottomNavbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/protected"
+            element={
+              <IsPrivate>
+                <Protected />
+              </IsPrivate>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <IsAnon>
+                <LoginPage />
+              </IsAnon>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <IsAnon>
+                <SignupPage />
+              </IsAnon>
+            }
+          />
+          <Route
+            path="/restaurants"
+            element={
+              <IsPrivate>
+                <AllRestaurants />
+              </IsPrivate>
+            }
+          />
+          <Route
+            path="/restaurants/find"
+            element={
+              <IsPrivate>
+                <FindRestaurants />
+              </IsPrivate>
+            }
+          />
+          <Route
+            path="/restaurants/add"
+            element={
+              <IsPrivate>
+                <AddRestaurant />
+              </IsPrivate>
+            }
+          />
+          <Route
+            path="/restaurants/:id"
+            element={
+              <IsPrivate>
+                <RestaurantDetails />
+              </IsPrivate>
+            }
+          />
+          <Route
+            path="/restaurants/:id/update"
+            element={
+              <IsPrivate>
+                <UpdateRestaurant />
+              </IsPrivate>
+            }
+          />
+          <Route path="*" element={<div>404 Not Found</div>} />
+        </Routes>
+        <BottomNavbar />
+      </div>
     </AuthProviderWrapper>
   );
 }
