@@ -19,7 +19,6 @@ function AllRestaurants() {
 
   return (
     <div className="mb-20">
-      <h1>See All Restaurants Here</h1>
       {restaurants.map(restaurant => {
         let images = [
           process.env.PUBLIC_URL + '/images/restaurant/restaurant1.png',
@@ -44,14 +43,28 @@ function AllRestaurants() {
         ];
         let src = images[Math.floor(Math.random() * images.length)];
         return (
-          <div className="border-b-solid border-b-2 border-b-slate-300" key={restaurant._id}>
+          <div className="border-b-solid border-b-2 border-b-slate-200" key={restaurant._id}>
             <Link to={`/restaurants/${restaurant._id}`}>
-              <h3 className="font-bold text-slate-600">{restaurant.name}</h3>
+              <h3 className="font-bold text-slate-600 my-4">{restaurant.name}</h3>
               <img src={src} />
-              <p>Priority: {restaurant.priority}</p>
-              <p>Cuisine: {restaurant.cuisine}</p>
-              <p>Neighborhood: {restaurant.neighborhood}</p>
-              <p>Budget: {restaurant.budget}</p>
+              <div className="flex flex-row justify-between py-2">
+                <div className="w-1/2 flex flex-col items-end pr-4 border-r-solid border-r-2 border-r-slate-200">
+                  <p>
+                    <span className="font-bold">Priority:</span> {restaurant.priority}
+                  </p>
+                  <p>
+                    <span className="font-bold">Cuisine:</span> {restaurant.cuisine}
+                  </p>
+                </div>
+                <div className="w-1/2 flex flex-col pl-4">
+                  <p>
+                    <span className="font-bold">Neighborhood:</span> {restaurant.neighborhood}
+                  </p>
+                  <p className="mb-4">
+                    <span className="font-bold">Budget:</span> {restaurant.budget}
+                  </p>
+                </div>
+              </div>
             </Link>
           </div>
         );
