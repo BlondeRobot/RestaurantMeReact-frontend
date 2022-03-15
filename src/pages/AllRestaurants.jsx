@@ -18,7 +18,7 @@ function AllRestaurants() {
   }, []);
 
   return (
-    <div className="mb-20">
+    <div className="mb-20 mt-16">
       {restaurants.map(restaurant => {
         let images = [
           process.env.PUBLIC_URL + '/images/restaurant/restaurant1.png',
