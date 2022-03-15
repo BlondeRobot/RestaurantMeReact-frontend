@@ -40,7 +40,7 @@ function AddRestaurant() {
   };
 
   return (
-    <div>
+    <div className='mt-20'>
       <h1>Add A Restaurant To Your Wishlist</h1>
       <form className="flex flex-col items-center" onSubmit={handleSubmit}>
         <div className="flex w-full py-1">

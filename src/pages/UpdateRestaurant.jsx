@@ -58,7 +58,7 @@ function UpdateRestaurant() {
   };
 
   return (
-    <div>
+    <div className='mt-20'>
       <h1>Update Your Restaurant</h1>
       <form className="flex flex-col items-center" onSubmit={handleSubmit}>
         <div className="flex w-full py-1">

@@ -39,8 +39,8 @@ function FindRestaurants() {
   };
 
   return (
-    <div>
-      <h1>Find Restaurants That Match Your Search Criteria</h1>
+    <div className='mt-20'>
+      <h3>Find Restaurants That Match Your Search Criteria</h3>
       <form className="flex flex-col items-center" onSubmit={handleSubmit}>
         <div className="flex w-full py-1">
           <label className="pt-2 pb-1">Name</label>
