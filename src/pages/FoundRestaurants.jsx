@@ -5,28 +5,28 @@ function FoundRestaurants({ foundRestaurants }) {
     <div className="mb-20">
       <h1>These restaurants match your search criteria</h1>
       {foundRestaurants.map(restaurant => {
-               let images = [
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant1.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant2.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant3.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant4.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant5.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant6.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant7.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant8.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant9.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant10.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant11.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant12.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant13.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant14.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant15.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant16.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant17.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/restaurant18.png',
-                 process.env.PUBLIC_URL + '/images/restaurant/default-restaurant.png',
-               ];
-               let src = images[Math.floor(Math.random() * images.length)];
+        let images = [
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant1.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant2.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant3.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant4.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant5.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant6.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant7.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant8.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant9.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant10.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant11.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant12.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant13.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant14.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant15.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant16.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant17.png',
+          process.env.PUBLIC_URL + '/images/restaurant/restaurant18.png',
+          process.env.PUBLIC_URL + '/images/restaurant/default-restaurant.png',
+        ];
+        let src = images[Math.floor(Math.random() * images.length)];
         return (
           <div key={restaurant._id}>
             <Link to={`/restaurants/${restaurant._id}`}>

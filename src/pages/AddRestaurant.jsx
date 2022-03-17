@@ -44,10 +44,10 @@ function AddRestaurant() {
       className="mt-16 h-screen flex flex-col items-end"
       style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}
     >
-      <h1 className="font-bold">Add A Restaurant To Your Wishlist</h1>
-      <div className="w-4/5 flex flex-col justify-end">
+      <h1 className="font-bold mt-4 mb-2">Add A Restaurant To Your Wishlist</h1>
+      <div className="w-full flex flex-col">
         <form className="flex flex-col items-center" onSubmit={handleSubmit}>
-          <div className="flex w-full py-1">
+          <div className="flex w-full">
             <label className="font-bold">Name</label>
             <input
               className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
