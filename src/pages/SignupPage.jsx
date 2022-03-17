@@ -34,34 +34,37 @@ function SignupPage() {
   };
 
   return (
-    <div className="SignupPage">
+    <div className="SignupPage pt-20 h-screen bg-purple-300 flex flex-col items-end">
       <h1>Sign Up</h1>
 
-      <form className="flex flex-col items-center" onSubmit={handleSignupSubmit}>
-        <div className="flex w-full py-1">
-          <label>Email:</label>
-          <input type="email" name="email" value={email} onChange={handleEmail} />
-        </div>
-        <div className="flex w-full py-1">
-          <label>Password:</label>
-          <input type="password" name="password" value={password} onChange={handlePassword} />
-        </div>
-        <div className="flex w-full py-1">
-          <label>Name:</label>
-          <input type="text" name="name" value={name} onChange={handleName} />
-        </div>
-        <button
-          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
-          type="submit"
-        >
-          Sign Up
-        </button>
-      </form>
-
+      <div className="w-2/3 flex justify-end bg-white">
+        <form className="flex flex-col items-center" onSubmit={handleSignupSubmit}>
+          <div className="flex w-full py-1">
+            <label>Email:</label>
+            <input type="email" name="email" value={email} onChange={handleEmail} />
+          </div>
+          <div className="flex w-full py-1">
+            <label>Password:</label>
+            <input type="password" name="password" value={password} onChange={handlePassword} />
+          </div>
+          <div className="flex w-full py-1">
+            <label>Name:</label>
+            <input type="text" name="name" value={name} onChange={handleName} />
+          </div>
+          <div className="w-full flex justify-end">
+            <button
+              className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
+              type="submit"
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
       <p>Already have an account?</p>
-      <Link to={'/login'}> Login</Link>
+      <Link to={'/login'}> Log In</Link>
     </div>
   );
 }
