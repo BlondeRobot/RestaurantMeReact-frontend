@@ -43,7 +43,7 @@ function AllRestaurants() {
         ];
         let src = images[Math.floor(Math.random() * images.length)];
         return (
-          <div className="border-b-solid border-b-2 border-b-slate-200" key={restaurant._id}>
+          <div className="border-b-solid border-b-1 border-b-slate-200" key={restaurant._id}>
             <Link to={`/restaurants/${restaurant._id}`}>
               <h3 className="font-bold text-slate-600 my-4">{restaurant.name}</h3>
               <img src={src} />

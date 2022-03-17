@@ -58,13 +58,13 @@ function UpdateRestaurant() {
   };
 
   return (
-    <div className='mt-20'>
-      <h1>Update Your Restaurant</h1>
+    <div className="mt-16 h-screen" style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}>
+      <h1 className="font-bold py-2">Update Your Restaurant</h1>
       <form className="flex flex-col items-center" onSubmit={handleSubmit}>
         <div className="flex w-full py-1">
-          <label className="pt-2 pb-1">Name</label>
+          <label className="pt-2 pb-1 font-bold">Name</label>
           <input
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             type="text"
             name="name"
             value={restaurant.name}
@@ -72,9 +72,9 @@ function UpdateRestaurant() {
           />
         </div>
         <div className="flex w-full py-1">
-          <label>Priority</label>
+          <label className="font-bold py-1">Priority</label>
           <select
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             name="priority"
             value={restaurant.priority}
             onChange={handleOnChange}
@@ -89,9 +89,9 @@ function UpdateRestaurant() {
           </select>
         </div>
         <div className="flex w-full py-1">
-          <label>Cuisine</label>
+          <label className="font-bold py-1">Cuisine</label>
           <select
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             name="cuisine"
             value={restaurant.cuisine}
             onChange={handleOnChange}
@@ -106,9 +106,9 @@ function UpdateRestaurant() {
           </select>
         </div>
         <div className="flex w-full py-1">
-          <label>Neighborhood</label>
+          <label className="font-bold py-1">Neighborhood</label>
           <select
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             name="neighborhood"
             value={restaurant.neighborhood}
             onChange={handleOnChange}
@@ -123,9 +123,9 @@ function UpdateRestaurant() {
           </select>
         </div>
         <div className="flex w-full py-1">
-          <label>Budget</label>
+          <label className="font-bold py-1">Budget</label>
           <select
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             name="budget"
             value={restaurant.budget}
             onChange={handleOnChange}
@@ -140,9 +140,9 @@ function UpdateRestaurant() {
           </select>
         </div>
         <div className="flex w-full py-1">
-          <label>Ambience</label>
+          <label className="font-bold py-1">Ambience</label>
           <select
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             name="ambience"
             value={restaurant.ambience}
             onChange={handleOnChange}
@@ -157,9 +157,9 @@ function UpdateRestaurant() {
           </select>
         </div>
         <div className="flex w-full py-1">
-          <label>Vegan Menu</label>
+          <label className="font-bold py-1">Vegan Menu</label>
           <select
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             name="veganMenu"
             value={restaurant.veganMenu}
             onChange={handleOnChange}
@@ -174,9 +174,9 @@ function UpdateRestaurant() {
           </select>
         </div>
         <div className="flex w-full py-1">
-          <label>Gluten Free</label>
+          <label className="font-bold py-1">Gluten Free</label>
           <select
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             name="glutenFree"
             value={restaurant.glutenFree}
             onChange={handleOnChange}
@@ -191,9 +191,9 @@ function UpdateRestaurant() {
           </select>
         </div>
         <div className="flex w-full py-1">
-          <label>Notes</label>
+          <label className="font-bold py-1">Notes</label>
           <input
-            className="w-full bg-gray-200 ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+            className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
             type="text"
             name="notes"
             value={restaurant.notes}
@@ -204,7 +204,7 @@ function UpdateRestaurant() {
           className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
           type="submit"
         >
-          Update Your Restaurant
+          Update Restaurant
         </button>
       </form>
     </div>

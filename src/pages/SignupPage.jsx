@@ -34,10 +34,13 @@ function SignupPage() {
   };
 
   return (
-    <div className="SignupPage pt-20 h-screen bg-purple-300 flex flex-col items-end">
+    <div
+      className="SignupPage pt-20 h-screen flex flex-col items-end"
+      style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}
+    >
       <h1>Sign Up</h1>
 
-      <div className="w-2/3 flex justify-end bg-white">
+      <div className="w-2/3 flex justify-end">
         <form className="flex flex-col items-center" onSubmit={handleSignupSubmit}>
           <div className="flex w-full py-1">
             <label>Email:</label>

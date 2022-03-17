@@ -12,7 +12,7 @@ function Navbar() {
       {isLoggedIn && (
         <div className="fixed top-0 justify-between h-16 bg-white shadow flex inset-x-0">
           <div className="flex flex-col pl-20 items-center justify-center w-5/6">
-            <span className="border-b-solid border-b-2 border-b-slate-200">{user && `${user.name}'s`}</span>
+            <span className="border-b-solid border-b-2 border-b-gray-400">{user && `${user.name}'s`}</span>
             <span>RestaurantMe</span>
           </div>
           <div className="w-1/6 flex items-center justify-center">
