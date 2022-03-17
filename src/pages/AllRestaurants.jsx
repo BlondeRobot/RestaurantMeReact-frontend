@@ -18,7 +18,7 @@ function AllRestaurants() {
   }, []);
 
   return (
-    <div className="mb-20 mt-16">
+    <div className="mb-20 mt-20">
       {restaurants.map(restaurant => {
         let images = [
           process.env.PUBLIC_URL + '/images/restaurant/restaurant1.png',
@@ -47,7 +47,7 @@ function AllRestaurants() {
             <Link to={`/restaurants/${restaurant._id}`}>
               <h3 className="font-bold text-slate-600 my-4">{restaurant.name}</h3>
               <img src={src} />
-              <div className="flex flex-row justify-between py-2">
+              {/* <div className="flex flex-row justify-between py-2">
                 <div className="w-1/2 flex flex-col items-end pr-4 border-r-solid border-r-2 border-r-slate-200">
                   <p>
                     <span className="font-bold">Priority:</span> {restaurant.priority}
@@ -63,6 +63,17 @@ function AllRestaurants() {
                   <p className="mb-4">
                     <span className="font-bold">Budget:</span> {restaurant.budget}
                   </p>
+                </div>
+              </div> */}
+
+              <div className="py-4 border-b-solid border-b-2 border-b-gray-400">
+                <div className='mb-1'>
+                  <span className="font-bold">Priority: </span> {restaurant.priority} <span> </span>
+                  <span className="font-bold">Cuisine: </span> {restaurant.cuisine} <span> </span>
+                </div>
+                <div>
+                  <span className="font-bold">Neighborhood: </span> {restaurant.neighborhood} <span> </span>
+                  <span className="font-bold">Budget: </span> {restaurant.budget}
                 </div>
               </div>
             </Link>
