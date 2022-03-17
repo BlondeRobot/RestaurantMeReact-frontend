@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from './../context/auth.context';
 
@@ -8,7 +8,6 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    // <nav fixed top-0 left-0 right-0 h-45 pb-10>
     <nav>
       {isLoggedIn && (
         <div className="fixed top-0 justify-between h-16 bg-white shadow flex inset-x-0">
@@ -37,7 +36,7 @@ function Navbar() {
         </div>
       )}
 
-      {!isLoggedIn && (
+      {/* {!isLoggedIn && (
         <div className="bg-slate-400">
           <Link to="/signup">
             {' '}
@@ -48,7 +47,7 @@ function Navbar() {
             <button>Login</button>{' '}
           </Link>
         </div>
-      )}
+      )} */}
     </nav>
   );
 }

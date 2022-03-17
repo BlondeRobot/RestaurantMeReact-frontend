@@ -37,22 +37,30 @@ function SignupPage() {
     <div className="SignupPage">
       <h1>Sign Up</h1>
 
-      <form onSubmit={handleSignupSubmit}>
-        <label>Email:</label>
-        <input type="email" name="email" value={email} onChange={handleEmail} />
-
-        <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword} />
-
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
-
-        <button type="submit">Sign Up</button>
+      <form className="flex flex-col items-center" onSubmit={handleSignupSubmit}>
+        <div className="flex w-full py-1">
+          <label>Email:</label>
+          <input type="email" name="email" value={email} onChange={handleEmail} />
+        </div>
+        <div className="flex w-full py-1">
+          <label>Password:</label>
+          <input type="password" name="password" value={password} onChange={handlePassword} />
+        </div>
+        <div className="flex w-full py-1">
+          <label>Name:</label>
+          <input type="text" name="name" value={name} onChange={handleName} />
+        </div>
+        <button
+          className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
+          type="submit"
+        >
+          Sign Up
+        </button>
       </form>
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Already have account?</p>
+      <p>Already have an account?</p>
       <Link to={'/login'}> Login</Link>
     </div>
   );
