@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 function FoundRestaurants({ foundRestaurants }) {
   return (
     <div className="mb-20">
-      {/* <h1>These restaurants match your search criteria</h1> */}
+      <h3 className="pl-2 font-bold border-double border-4 border-gray-500 rounded">
+        These restaurants match your search criteria:
+      </h3>
       {foundRestaurants.map(restaurant => {
         let images = [
           process.env.PUBLIC_URL + '/images/restaurant/restaurant1.png',
@@ -30,7 +32,7 @@ function FoundRestaurants({ foundRestaurants }) {
         return (
           <div key={restaurant._id}>
             <Link to={`/restaurants/${restaurant._id}`}>
-              <h3 className="font-bold py-2">{restaurant.name}</h3>
+              <h3 className="font-bold py-2 text-slate-600">{restaurant.name}</h3>
             </Link>
             <img src={src} />
             <div className="py-4 border-b-solid border-b-2 border-b-gray-400">
@@ -43,9 +45,6 @@ function FoundRestaurants({ foundRestaurants }) {
                 <span className="font-bold">Budget: </span> {restaurant.budget}
               </div>
             </div>
-            {/* <p>Priority: {restaurant.priority}</p>
-            <p>Neighborhood: {restaurant.neighborhood}</p>
-            <p>Budget: {restaurant.budget}</p> */}
           </div>
         );
       })}

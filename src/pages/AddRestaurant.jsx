@@ -41,7 +41,7 @@ function AddRestaurant() {
 
   return (
     <div
-      className="mt-16 h-screen flex flex-col items-end"
+      className="mt-16 h-screen flex flex-col"
       style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}
     >
       <h1 className="font-bold mt-4 mb-2">Add A Restaurant To Your Wishlist</h1>
