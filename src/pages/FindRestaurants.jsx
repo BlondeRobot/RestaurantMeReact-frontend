@@ -41,7 +41,7 @@ function FindRestaurants() {
   return (
     <div className="mt-16">
       <div style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}>
-        <h3 className='font-bold pt-2'>Find Restaurants That Match Your Search Criteria</h3>
+        <h1 className='font-bold pt-2'>Select Your Search Criteria</h1>
         <form className="flex flex-col items-center" onSubmit={handleSubmit}>
           <div className="flex w-full py-1">
             <label className="font-bold pt-2 pb-1">Name</label>

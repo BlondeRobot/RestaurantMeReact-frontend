@@ -37,7 +37,7 @@ function LoginPage() {
       <h1 className="pt-20 font-bold">Log In</h1>
       <div className="w-2/3 flex justify-end">
         <form className="flex flex-col items-center" onSubmit={handleLoginSubmit}>
-          <div className="flex w-full py-2">
+          <div className="flex w-full py-1">
             <label className="pt-2 pb-1 font-bold">Email:</label>
             <input
               className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
@@ -47,7 +47,7 @@ function LoginPage() {
               onChange={handleEmail}
             />
           </div>
-          <div className="flex w-full py-2">
+          <div className="flex w-full py-1">
             <label className="pt-2 pb-1 font-bold">Password:</label>
             <input
               className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"

@@ -38,23 +38,41 @@ function SignupPage() {
       className="SignupPage pt-20 h-screen flex flex-col items-end"
       style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}
     >
-      <h1>Sign Up</h1>
+      <h1 className="font-bold">Sign Up</h1>
 
       <div className="w-2/3 flex justify-end">
         <form className="flex flex-col items-center" onSubmit={handleSignupSubmit}>
           <div className="flex w-full py-1">
-            <label>Email:</label>
-            <input type="email" name="email" value={email} onChange={handleEmail} />
+            <label className="pt-2 pb-1 font-bold">Email:</label>
+            <input
+              className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleEmail}
+            />
           </div>
           <div className="flex w-full py-1">
-            <label>Password:</label>
-            <input type="password" name="password" value={password} onChange={handlePassword} />
+            <label className="pt-2 pb-1 font-bold">Password:</label>
+            <input
+              className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handlePassword}
+            />
           </div>
           <div className="flex w-full py-1">
-            <label>Name:</label>
-            <input type="text" name="name" value={name} onChange={handleName} />
+            <label className="pt-2 pb-1 font-bold">Name:</label>
+            <input
+              className="w-full bg-white ml-4 appearance-none border-2 border-gray-200 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-slate-500"
+              type="text"
+              name="name"
+              value={name}
+              onChange={handleName}
+            />
           </div>
-          <div className="w-full flex justify-end">
+          <div className="w-full py-1 flex justify-end">
             <button
               className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
               type="submit"
