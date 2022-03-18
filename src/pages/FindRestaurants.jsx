@@ -40,8 +40,8 @@ function FindRestaurants() {
 
   return (
     <div className="mt-16">
-      <div style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}>
-        <h1 className='font-bold pt-2'>Select Your Search Criteria</h1>
+      <div className='h-full' style={{ backgroundImage: `url(/images/restaurant/bg1.png)` }}>
+        <h1 className='font-bold py-4'>Select Your Search Criteria</h1>
         <form className="flex flex-col items-center" onSubmit={handleSubmit}>
           <div className="flex w-full py-1">
             <label className="font-bold pt-2 pb-1">Name</label>
@@ -173,7 +173,7 @@ function FindRestaurants() {
             </select>
           </div>
           <button
-            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold my-2 py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
+            className="bg-white hover:bg-gray-100 text-gray-800 font-semibold mt-2 mb-16 py-2 px-4 w-1/2 border border-gray-400 rounded shadow"
             type="submit"
           >
             Find Restaurants

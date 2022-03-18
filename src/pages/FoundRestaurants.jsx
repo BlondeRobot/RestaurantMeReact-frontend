@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function FoundRestaurants({ foundRestaurants }) {
   return (
     <div className="mb-20">
-      <h1>These restaurants match your search criteria</h1>
+      {/* <h1>These restaurants match your search criteria</h1> */}
       {foundRestaurants.map(restaurant => {
         let images = [
           process.env.PUBLIC_URL + '/images/restaurant/restaurant1.png',

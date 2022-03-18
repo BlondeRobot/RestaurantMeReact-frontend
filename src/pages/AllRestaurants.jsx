@@ -47,24 +47,6 @@ function AllRestaurants() {
             <Link to={`/restaurants/${restaurant._id}`}>
               <h3 className="font-bold text-slate-600 my-4">{restaurant.name}</h3>
               <img src={src} />
-              {/* <div className="flex flex-row justify-between py-2">
-                <div className="w-1/2 flex flex-col items-end pr-4 border-r-solid border-r-2 border-r-slate-200">
-                  <p>
-                    <span className="font-bold">Priority:</span> {restaurant.priority}
-                  </p>
-                  <p>
-                    <span className="font-bold">Cuisine:</span> {restaurant.cuisine}
-                  </p>
-                </div>
-                <div className="w-1/2 flex flex-col pl-4">
-                  <p>
-                    <span className="font-bold">Neighborhood:</span> {restaurant.neighborhood}
-                  </p>
-                  <p className="mb-4">
-                    <span className="font-bold">Budget:</span> {restaurant.budget}
-                  </p>
-                </div>
-              </div> */}
 
               <div className="py-4 border-b-solid border-b-2 border-b-gray-400">
                 <div className='mb-1'>
