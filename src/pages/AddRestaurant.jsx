@@ -32,10 +32,7 @@ function AddRestaurant() {
 
     apiService
       .addRestaurant(form)
-      .then(response => {
-        console.log(response);
-        navigate('/restaurants');
-      })
+      .then(() => navigate('/restaurants'))
       .catch(error => console.log(error));
   };
 

@@ -48,12 +48,9 @@ function UpdateRestaurant() {
         ambience: restaurant.ambience,
         veganMenu: restaurant.veganMenu,
         glutenFree: restaurant.glutenFree,
-        notes: restaurant.notes
+        notes: restaurant.notes,
       })
-      .then(response => {
-        console.log(response);
-        navigate('/restaurants');
-      })
+      .then(() => navigate('/restaurants'))
       .catch(error => console.log(error));
   };
 
