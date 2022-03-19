@@ -25,6 +25,7 @@ function UpdateRestaurant() {
 
   useEffect(() => {
     getRestaurantById();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleOnChange = e => {
